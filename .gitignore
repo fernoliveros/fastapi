@@ -1,2 +1,5 @@
 venv/
 docker-compose.yaml
+**/__pycache__
+/postgres/data
+setenv.sh

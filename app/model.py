@@ -1,9 +1,24 @@
 
-from typing import Optional
-
 from pydantic import BaseModel
 
-class Student(BaseModel): 
-    student_id: Optional[int] = None
+class Pet(BaseModel): 
+    user_id: int | None = None
+    pet_id: int | None = None
     first_name: str
-    done: Optional[bool] = False
+    done: bool | None = False
+
+class User(BaseModel):
+    user_id: int | None = None
+    nickname: str
+    password: str
+    email: str
+    disabled: bool | None = None
+    
+class LoginCreds(BaseModel):
+    email: str
+    password: str
+
+class JwtPayload(BaseModel):
+    email: str
+    user_id: int
+    
