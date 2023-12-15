@@ -20,5 +20,6 @@ class LoginCreds(BaseModel):
 
 class JwtPayload(BaseModel):
     email: str
+    nickname: str
     user_id: int
     
